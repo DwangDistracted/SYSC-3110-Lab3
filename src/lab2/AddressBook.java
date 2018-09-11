@@ -41,5 +41,17 @@ public class AddressBook {
 	 */
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
+		
+		AddressBook buddies = new AddressBook();
+		
+		try {
+			BuddyInfo homer = new BuddyInfo("Homer", "Some Place", 1234567890);
+			
+			buddies.addBuddy(homer);
+			buddies.removeBuddy(homer);
+			
+		} catch (IllegalArgumentException e) {
+			System.out.println("EXCEPTION: Illegal Argument Exception - " + e.getMessage());
+		}
 	}
 }
